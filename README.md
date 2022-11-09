@@ -1,1 +1,0 @@
-# snazzy-event-1262
