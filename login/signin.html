@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        #Signin {
+            width: 30%;
+            margin: 0% auto;
+            padding: 30px;
+        }
+
+        #Signin>img {
+            width: 30%;
+            display: block;
+            margin: auto;
+        }
+
+        #Signin>div {
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        #Signin>div>a {
+            text-decoration: none;
+            color: rgb(4, 153, 153);
+            font-weight: 600;
+        }
+
+        #Signin>div>a:hover {
+            text-decoration: underline;
+        }
+
+        form>span {
+            color: rgb(4, 153, 153);
+            line-height: 1.5;
+        }
+
+        form>span:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        form>a {
+            color: rgb(4, 153, 153);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        form>a:hover {
+            text-decoration: underline;
+        }
+
+        input {
+            padding: 3px 0px;
+            border-radius: 3px;
+            border: 1px solid #cbd6e2;
+            font-size: 16px;
+            background-color: #f5f8fa;
+            color: #33475b;
+            display: block;
+            height: 40px;
+            margin: 10px 0px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+            background-color: #166fe5;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0b6eef;
+        }
+
+        .remember {
+            width: 5%;
+            display: inline;
+            margin-right: 5px;
+        }
+
+        .remember:hover {
+            cursor: pointer;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="email"],
+        [type="password"] {
+            margin-bottom: 20px;
+        }
+
+        .google-sign-in {
+            background: #5886d4;
+            border-radius: 0.1875rem;
+            border: none;
+            clear: both;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            height: 40px;
+            text-align: center;
+            padding: 0;
+            position: relative;
+            white-space: nowrap;
+            width: 100%;
+            font-weight: 500;
+        }
+
+        .google-sign-in .icon {
+            background-color: #fff;
+            height: 38px;
+            left: 1px;
+            position: absolute;
+            top: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            color: rgb(147, 0, 0);
+        }
+
+        .google-sign-in .buttonText {
+            display: inline-block;
+            font-family: Roboto, sans-serif;
+            margin-top: 10px;
+            vertical-align: middle;
+            color: white;
+            align-items: center;
+        }
+
+        .google-sign-in:hover {
+            background: #4072c9;
+        }
+        button{
+            color: white;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            background-color: #425b76;
+    border-color: #425b76;
+    padding: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="Signin">
+        <img src="../grow.jpg" alt="">
+        <div>
+            <label for="">Don't have an account?</label>
+            <a href="./signup.html">Signup</a><br>
+        </div>
+        <form>
+            <label for="">Email address</label><br />
+            <input type="email" id="mail" placeholder="Enter Email">
+            <label for="password">Password</label><br>
+            <span>Show Password</span><br>
+            <input type="password" name="" id="pass" placeholder="Enter Password">
+            <a href="">Forgot my password</a><br>
+            <div class="form-group"> <input type="checkbox" name="rememberme" class="remember">Remember Me</div>
+            <input type="submit" value="Log in" id="submit">
+
+
+        </form>
+        <br><br>
+        <hr>
+        <div>
+            <a class="google-sign-in">
+                <span class="icon"><i class="fa-brands fa-google"></i></span><span class="buttonText">Sign In With
+                    Google</span>
+            </a>
+        </div>
+
+       <button>Log in with SSO</button>
+    </div>
+</body>
+
+</html>
+
+<script src="./signin.js"></script>
