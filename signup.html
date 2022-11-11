@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top {
+            width: 80%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mid {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 40px;
+        }
+
+        .mid>div:first-child {
+            width: 40%;
+        }
+
+        .mid>div:first-child>h1 {
+            font-size: 33px;
+            margin-bottom: 30px;
+        }
+
+        .mid>div:last-child {
+            text-align: center;
+            width: 50%;
+        }
+
+        .mid>div:last-child>img {
+            width: 70%;
+            margin: 30px 0px 0px 40px;
+        }
+
+        .googleBtn {
+            background: #5886d4;
+            border-radius: 0.1875rem;
+            position: relative;
+            border: none;
+            clear: both;
+            color: white;
+            cursor: pointer;
+            padding: 0;
+            width: 100%;
+            height: 40px;
+            margin: 20px 0px;
+        }
+
+        .google-sign-in {
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            top: 8px;
+            left: 120px;
+            font-size: large;
+        }
+
+        .googleImg {
+            height: 38px;
+            left: 1px;
+            position: absolute;
+            top: 1px;
+            width: 40px;
+        }
+
+        .line {
+            display: flex;
+            width: 100%;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            text-align: center;
+            color: rgb(153, 172, 194);
+            margin: 32px auto;
+        }
+
+        .line::before {
+            content: "";
+            border-top: 1px solid rgb(203, 214, 226);
+            margin: 0px 15px 0px 0px;
+            flex: 1 0 20px;
+        }
+
+        .line::after {
+            content: "";
+            border-top: 1px solid rgb(203, 214, 226);
+            margin: 0px 15px 0px 15px;
+            flex: 1 0 20px;
+        }
+        input{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;          
+            }
+            input[type="submit"]{
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+            background-color: rgb(255, 123, 0);
+            }
+            .para{
+                color: #516f90;
+                margin-top: 20px;
+                line-height: 1.5;
+            }
+            .para>a{
+                text-decoration: none;
+                padding-left: 5px;
+                color:rgb(4,146,175);
+            }
+            .para>a:hover{
+                text-decoration: underline;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="signUp">
+        <div class="top">
+            <div><img width="70%" src="../grow.jpg" alt=""></div>
+            <div><span>Have an account?</span> <a href="./signin.html">Sign in</a></div>
+        </div>
+
+        <div class="mid">
+            <div>
+                <h1>Create your free acount</h1>
+                <div class="googleBtn">
+                    <a href="https://accounts.google.com/" class="google-sign-in">Continue with Google</a>
+                    <img class="googleImg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRifGgi7GIuy4WTkFVPw5OW1jtTsfJJJa1E1sZsKGZTw&s"
+                        alt="">
+                </div>
+
+                <div class="line"><span>Or</span></div>
+                <form>
+                    <input type="text" name="" id="fName" placeholder="First Name" required>
+                    <input type="text" name="" id="lName" placeholder="LastName" required>
+                    <input type="email" id="mail" placeholder="Email address" required>
+                    <input type="submit" value="Next >" id="submit">
+                </form>
+                <p class="para">We’re committed to your privacy. HubSpot uses the information you provide to us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time  For more information, check out our  <a href="">Privacy Policy</a>.</p>
+            </div>
+            <div>
+                <img src="./girl.jpg" alt=""><br><br>
+                <h4>HubSpot's CRM is 100% free.</h4><br>
+                <p>No credit card needed.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./signup.js"></script>

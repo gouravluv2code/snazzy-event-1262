@@ -26,13 +26,13 @@
             margin-bottom: 20px;
         }
 
-        #Signin>div>a {
+        #Signin>div:first-child>a {
             text-decoration: none;
             color: rgb(4, 153, 153);
             font-weight: 600;
         }
 
-        #Signin>div>a:hover {
+        #Signin>div:first-child>a:hover {
             text-decoration: underline;
         }
 
@@ -105,57 +105,48 @@
             margin-bottom: 20px;
         }
 
-        .google-sign-in {
+        .googleBtn {
             background: #5886d4;
             border-radius: 0.1875rem;
+            position: relative;
             border: none;
             clear: both;
-            color: #fff;
+            color: white;
             cursor: pointer;
-            display: inline-block;
-            height: 40px;
-            text-align: center;
             padding: 0;
-            position: relative;
-            white-space: nowrap;
             width: 100%;
-            font-weight: 500;
+            height: 40px;   
         }
 
-        .google-sign-in .icon {
-            background-color: #fff;
+        .google-sign-in {
+            position: absolute;
+            color: #fff;
+            text-decoration: none;
+            top: 8px;
+            left: 120px;
+            font-size: large;
+        }
+
+        .googleImg {
             height: 38px;
             left: 1px;
             position: absolute;
             top: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 38px;
-            color: rgb(147, 0, 0);
         }
 
-        .google-sign-in .buttonText {
-            display: inline-block;
-            font-family: Roboto, sans-serif;
-            margin-top: 10px;
-            vertical-align: middle;
-            color: white;
-            align-items: center;
-        }
-
-        .google-sign-in:hover {
-            background: #4072c9;
-        }
-        button{
+        button {
             color: white;
             cursor: pointer;
             border: none;
             width: 100%;
             font-size: 18px;
             background-color: #425b76;
-    border-color: #425b76;
-    padding: 10px 0px;
+            border-color: #425b76;
+            padding: 10px 0px;
+        }
+        .googleBtn:hover{
+            background: #166fe5;
         }
     </style>
 </head>
@@ -182,14 +173,14 @@
         </form>
         <br><br>
         <hr>
-        <div>
-            <a class="google-sign-in">
-                <span class="icon"><i class="fa-brands fa-google"></i></span><span class="buttonText">Sign In With
-                    Google</span>
-            </a>
+        <div class="googleBtn">
+            <a href="https://accounts.google.com/" class="google-sign-in">Sign in with Google</a>
+            <img class="googleImg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRifGgi7GIuy4WTkFVPw5OW1jtTsfJJJa1E1sZsKGZTw&s"
+                alt="">
         </div>
 
-       <button>Log in with SSO</button>
+        <button>Log in with SSO</button>
     </div>
 </body>
 

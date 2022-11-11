@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp page</title>
+    <style>
+        body>img{
+            margin-left: 30px;
+            width: 8%;
+        }
+        .otpPage{
+          display: flex;
+          justify-content: space-around;
+        }
+        .otpPage>div:first-child{
+            padding: 0px 50px;
+            width: 30%;
+        }
+        .head{
+            margin-top: -10px;
+        }
+        input[type="text"]{
+            width: 100%;
+            padding: 10px 0px;
+            font-size: large;
+            margin-bottom: 30px;
+        }
+        input[type="submit"]{
+            width: 100%;
+            padding: 15px 0px;
+            background-color: rgb(255,123,90);
+            color: white;
+            border: none;
+            font-size: large;
+        }
+        .left>a{
+            text-decoration: none;
+            color: rgb(2,145,174);
+        }
+        .left>a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./grow.jpg" alt="">
+    <div class="otpPage">
+        <div>
+            <h1>Check your email</h1>
+           <div class="left">
+            <p>please enter the verification code we sent to:</p>
+            <h4 class="head"></h4>
+            <form>
+                <input type="text" placeholder="Enter Code" id="code">
+                <input type="submit" value="Verify email" id="submit">
+            </form>
+            <p>Didn't get the email?</p>
+            <a href="">Resend or edit your email address</a>
+           </div>
+        </div>
+        <div>
+            <img src="./mail.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let details = JSON.parse(localStorage.getItem('person-details')) || [];
+
+    details.forEach((element) => {
+        document.querySelector(".head").innerText = element.email
+    })
+    document.querySelector("#submit").addEventListener("click",function(){
+        if(document.querySelector("#code").value==1234){
+            alert("correct")
+        }
+    })
+</script>
