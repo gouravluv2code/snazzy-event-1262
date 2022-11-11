@@ -4,9 +4,14 @@
     justify-content: space-around;
     font-size: 16px;
     font-weight: 600;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
 }
-
+#header ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: white
+}
 .links {
     display: flex;
     justify-content: space-around;
@@ -26,6 +31,7 @@
 .links>li>a {
     text-decoration: none;
 }
+
 .links>li>a:hover {
     text-decoration: underline;
     color: teal;
@@ -77,7 +83,8 @@ nav {
     top: 0px;
     width: 100%;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    background-color: white;
 }
 
 #botNav>ul>div>img {
@@ -437,31 +444,37 @@ nav {
 
 
 /* //----------------------------------bottom bot part ----------------------------------- */
-#botpart{
+#botpart {
     background-color: white;
 }
-.demo{
+
+.demo {
     width: 90%;
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding-bottom: 50px;
 }
-.demo>div:first-child{
+
+.demo>div:first-child {
     width: 55%;
     margin-top: 50px;
 }
-.demo>div:first-child>h2{
+
+.demo>div:first-child>h2 {
     margin-top: 20px;
 }
-.demo>div:first-child>P{
+
+.demo>div:first-child>P {
     font-size: larger;
     line-height: 1.5;
 }
-.but{
+
+.but {
     margin: 30px 0px;
 }
-.but>a:first-child{
+
+.but>a:first-child {
     border-radius: 5px;
     padding: 15px 40px;
     margin-right: 10px;
@@ -469,87 +482,171 @@ nav {
     border: none;
     color: white;
 }
-.but>a:last-child{
+
+.but>a:last-child {
     padding: 15px 30px;
     font-weight: 600;
     color: orangered;
     border: 1px solid orangered;
     border-radius: 5px;
 }
-.demo>div:last-child{
+
+.demo>div:last-child {
     margin-top: 20px;
     width: 30%;
     text-align: center;
 }
 
-.but>a{
-font-size: larger;
+.but>a {
+    font-size: larger;
 }
-.but>a:first-child:hover{
+
+.but>a:first-child:hover {
     background-color: rgb(227, 131, 131)
 }
+
 .but>a:last-child:hover {
     background-color: rgb(194, 159, 146)
 }
 
-.demo>div>span{
+.demo>div>span {
     font-size: .875rem;
     line-height: 1.57;
 
 }
-.demo>div>span{
+
+.demo>div>span {
     font-size: 16px;
 }
 
 
 /* 
 //----------------------------------------footer------------------------------------------ */
-footer{
+footer {
     background-color: #213343;
     color: #fff;
+    font-family: Lexend Deca, sans-serif;
+    padding-bottom: 20px;
 }
-.foot{
-    width: 100%;
+
+.foot {
+    width: 95%;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    
+    padding-top: 30px;
 }
-.leftfooter{
+
+.leftfooter {
     width: 50%;
     display: flex;
     justify-content: space-between;
     margin: 30px;
-   
+    border-right: 1px solid #7691ad;
+    padding-right: 50px;
 }
 
-.rightfooter{
+.rightfooter {
     width: 60%;
     display: flex;
     justify-content: space-between;
     margin: 30px;
 }
-footer ul{
-   list-style: none;
-}
-footer ul li a{
-    color: #b6c7d6;
-}
-footer ul li{
-    line-height: 1.8;
+
+footer ul {
+    list-style: none;
 }
 
-footer span{
+footer ul li a {
+    color: #b6c7d6;
+    font-size: 0.85rem;
+}
+
+footer ul li {
+    line-height: 2;
+}
+
+footer p {
     margin-left: 40px;
     color: white;
     font-size: 18px;
 }
 
-.leftfooter>div:last-child{
+.leftfooter>div:last-child {
     margin-top: 19px;
 }
-footer ul li a:hover{
+
+footer ul li a:hover {
     text-decoration: underline;
     color: rgb(19, 159, 159);
     cursor: pointer;
+}
+
+.leftfooter>div:last-child {
+    margin-top: 42px;
+}
+
+.join>ul {
+    display: flex;
+    width: 30%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+}
+
+.join {
+    padding: 30px 0px;
+}
+
+.join i {
+    font-size: x-large;
+}
+
+.join {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.join>ul::before {
+    width: 33%;
+    position: absolute;
+    content: '';
+    border-top: 1px solid #7691ad;
+    top: 48%;
+    right: 0;
+}
+
+.join::after {
+    width: 37%;
+    position: absolute;
+    content: '';
+    border-top: 1px solid #7691ad;
+    top: 48%;
+}
+
+.end {
+    text-align: center;
+}
+
+.end>div>ul {
+    display: flex;
+    width: 20%;
+    margin: auto;
+    justify-content: space-between;
+    text-decoration: underline;
+}
+
+.end>div:nth-child(1)>img {
+    margin-right: 10px;
+}
+
+.end>div:nth-child(2)>img {
+    margin-top: 15px;
+}
+
+.end p {
+    font-size: 15px;
 }
