@@ -2,6 +2,7 @@ let details=JSON.parse(localStorage.getItem("person-details"))||[];
 
 let checkdetails=document.querySelector('form');
 checkdetails.addEventListener('submit',function(event){
+    let flag ="Wrong Credentials"
     event.preventDefault();
     if(checkdetails.mail.value=="" || checkdetails.pass.value==""){
             alert("please fill al the details")
@@ -9,14 +10,12 @@ checkdetails.addEventListener('submit',function(event){
     else{
         details.forEach(function(element){
         if(element.email===checkdetails.mail.value && element.password===checkdetails.pass.value){
-            alert("Login Successfully")
+            flag="Login Successfully"
             window.location.replace("home.html")
-           }
-           else{
-            alert("Wrong Credentials")
            }
         })
     }
+    alert(flag)
 })
 
 
