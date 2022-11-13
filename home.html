@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: montserrat;
+        }
+
+        nav {
+            background-color: rgb(46, 63, 80);
+            height: 60px;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #left {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        #left img {
+            margin-left: 10px;
+        }
+
+        #left>ul li {
+            display: inline-block;
+            line-height: 60px;
+            margin: 0px 10px;
+            border-radius: 3px;
+            padding: 0px 10px;
+        }
+
+        #left>ul li a {
+            color: white;
+        }
+
+        #left>ul {
+            margin-left: 20px;
+        }
+
+        #left>ul li:hover {
+            background-color: rgb(31, 39, 47);
+            transition: .5s;
+        }
+
+        #left>ul li i {
+            color: white;
+        }
+
+        #right {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            align-items: center;
+        }
+
+        #right li {
+            color: white;
+        }
+
+        #right>li>img {
+            border-radius: 50%;
+        }
+
+        input[type="text"] {
+            padding: 5px 0px;
+            outline: none;
+        }
+
+        #sectionleft {
+            box-shadow: rgb(81 111 144 / 25%) 1px 0px 3px 0px;
+            max-width: 256px;
+            min-width: 256px;
+            padding: 0px 32px;
+            position: sticky;
+            top: 0px;
+            padding-top: 30px;
+            height: 100vh;
+        }
+
+        #sectionleft>h1 {
+            margin-bottom: 9px;
+        }
+
+        #sectionleft>ul {
+            list-style: none;
+            padding-left: 0px;
+            line-height: 16px;
+            margin-bottom: 0px;
+        }
+
+        #sectionleft>ul li {
+            font-family: "Avenir Next W02", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            left: -12px;
+            line-height: 24px;
+            padding: 7px 12px;
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        #sectionleft>ul li:hover {
+            background-color: rgb(229, 245, 248);
+        }
+
+        #sectionleft>ul li a {
+            color: rgb(94, 113, 128);
+        }
+
+        #rightsection {
+            background-color: rgb(245, 248, 250);
+        }
+
+        section {
+            display: flex;
+        }
+
+        #rightsection {
+            width: 100%;
+        }
+
+        .infosec {
+            width: 80%;
+            margin: auto;
+            padding-top: 60px;
+        }
+
+        .infosec p {
+            font-size: 15px;
+        }
+        
+        #box1 {
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin: 20px 0px;
+            padding-left: 40px;
+            background-color: white;
+        }
+        #box1>span:hover {
+            color: rgb(39, 174, 174);
+            cursor: pointer;
+        }
+        
+        .learn {
+            border: none;
+            outline: none;
+            color: rgb(0, 145, 174);
+            background-color: white;
+        }
+
+        .learn:hover {
+            text-decoration: underline;
+        }
+
+        #box1>button {
+            display: block;
+            margin: 20px 0px;
+            padding: 8px 15px;
+            background-color: rgb(255, 122, 89);
+            border: none;
+            color: white;
+            border-radius: 2px;
+        }
+        #box1>button:hover{
+            background-color: rgb(232, 130, 105);
+            cursor: pointer;
+        }
+
+        #box1>a {
+            color: rgb(0, 145, 174);
+        }
+
+        #box1>a:hover {
+            text-decoration: underline;
+        }
+
+        .show {
+            display: flex;
+            margin: 20px auto;
+            padding: 8px 15px;
+            background-color: white;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 2px;
+        }
+
+        .show:hover {
+            border: 2px solid rgb(102, 200, 215);
+        }
+
+        #box2 {
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin: 20px 0px;
+            padding-left: 40px;
+            line-height: 2;
+            background-color: white;
+        }
+        #box2:hover {
+            border: 2px solid rgb(102, 200, 215);
+        }
+        #box2>p {
+            color: gray;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .add {
+            margin: 20px 0px;
+            padding: 10px 20px;
+            background-color: rgb(66, 91, 118);
+            border: none;
+            color: white;
+            border-radius: 2px;
+        }
+
+        .invite {
+            margin: 20px 0px;
+            padding: 10px 20px;
+            background-color: rgb(234, 240, 246);
+            border: none;
+            color: rgb(99, 126, 158);
+            border-radius: 2px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .upper {
+            padding: 5px 40px;
+            display: flex;
+            font-size: larger;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            outline: none;
+            background-color: white;
+            color: rgb(0, 164, 189);
+            margin: auto;
+            margin-bottom: -20px;
+        }
+
+        #box3 {
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin: 20px 0px;
+            padding-left: 40px;
+            line-height: 2;
+            background-color: white;
+        }
+
+        #box3>p {
+            color: gray;
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        #box3:hover {
+            border: 2px solid rgb(102, 200, 215);
+        }
+
+        #box4 {
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin: 20px 0px;
+            padding-left: 40px;
+            line-height: 2;
+            background-color: white;
+        }
+
+        #box4>p {
+            color: gray;
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        #box4:hover {
+            border: 2px solid rgb(102, 200, 215);
+        }
+        .but{
+            width: 100%;
+            padding: 20px 10px;
+            background-color: rgb(245,248,250);
+            margin: 15px 0px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            text-align: left;
+        }
+        .but:hover{
+            cursor: pointer;
+            color: rgb(52, 185, 205);
+        }
+        .more{
+           color: rgb(0,145,174);
+           margin-bottom: 30px;
+           
+           font-size: 15px;
+           font-weight: bold;
+        }
+        .more:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .finished{
+margin: 30px 0px;
+        }
+        .finished>a{
+            color: rgb(0,145,174);
+            text-decoration: none;
+        }
+        .finished>a:hover{
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="left">
+            <img src="./grow.jpg" alt="logo">
+            <ul>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">Conversation</a></li>
+                <li><a href="">Marketing</a></li>
+                <li><a href="">Sales</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Automation</a></li>
+                <li><a href="">Reports</a></li>
+            </ul>
+        </div>
+
+        <div id="right">
+
+            <input type="text" class="searchText" placeholder="Search...">
+            <li> <i class="fa-solid fa-gear"></i></li>
+            <li><i class="fa-solid fa-bell"></i></li>
+            <li><img width="30%"
+                    src="https://api-na1.hubspot.com/userpreferences/v1/avatar/e9c626e2395f1e1986de2e48dd63546a/100"
+                    alt=""><i class="bx bxs-chevron-down"></i></li>
+        </div>
+    </nav>
+
+
+    <section>
+        <div id="sectionleft">
+            <h1>User Guide</h1>
+            <ul>
+                <li><a href="">Marketing Hub Free</a></li>
+                <li><a href="">Sales Hub Free</a></li>
+                <li><a href="">Service Hub Free</a></li>
+                <li><a href="">Operations Hub Free</a></li>
+                <li><a href="">CMS Hub Free</a></li>
+                <hr>
+                <li><a href="">View your plan</a></li>
+            </ul>
+        </div>
+
+        <div id="rightsection">
+            <div class="infosec">
+
+                <h4>STEPS TO GET STARTED WITH HUBSPOT</h4>
+                <p>1 of 8 complete (About 42 minutes total left)</p>
+                <div id="box1">
+                    <p>progress: <b>13%</b></p><br><br>
+                    <span> Create your first account</span>
+                    <p>About 2 minutes</p><br><br>
+                    <p>See all their details and interactions you've had in one place. <button class="learn">Learn
+                            more</button></p>
+                    <button class="contact">Create contact</button>
+                    <a href="">Skip for now</a>
+                </div>
+                <button class="show">Show more task</button>
+                <h4>DISCOVER WHAT YOUR TOOLS CAN DO</h4>
+                <div id="box2">
+                    <h3>Recommended: Get started by adding some contacts</h3>
+                    <p>It's easy to do and we'll walk you through the process. Your data is safe and secure and will
+                        never be shared.</p>
+                    <button class="add">Add contacts</button>
+                    <button class="invite">Invite a Teammate to add contact</button>
+                    <button class="upper">^</button>
+                </div>
+
+                <div id="box3">
+                    <h3>Invite a teammate to try HubSpot with you</h3>
+                    <p>Unite your team on one powerful, connected, and easy-to-use platform.</p>
+                    <button class="upper">^</button>
+                </div>
+
+                <div id="box4">
+                    <h3>Get started with a 4 minute lesson on attracting the right audience</h3>
+                    <p>It's the quickest way to learn how to run inbound marketing campaigns at scale, using your new
+                        CRM.</p>
+                    <button class="upper">^</button>
+                </div>
+
+                <button class="show"> Discover more tipss and trics (6)</button>
+
+                <h4>HELPFUL INFORMATION</h4>
+                <button class="but">Is my information safe in GrowUp? will you read my emails or use my contacts?</button>
+                <button class="but">How can i send email in GrowUp</button>
+                <button class="but">How do I migrate data from my current CRM or spreadsheets to Growup</button>
+                <span class="more">Show more FAQs(5)</span>
+
+                <div class="finished"><span>Finished setting up? </span><a href="">Turn off the user guide</a><span>, and we won’t show you this page again.</span></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

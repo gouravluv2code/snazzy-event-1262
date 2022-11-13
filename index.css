@@ -4,7 +4,6 @@
     justify-content: space-around;
     font-size: 16px;
     font-weight: 600;
-    background-color: white;
 }
 #header ul li ul{
     position: absolute;
@@ -36,7 +35,9 @@
     text-decoration: underline;
     color: teal;
 }
-
+#login{
+    color: rgb(85,47,150);
+}
 a,
 a:hover {
     text-decoration: none;
@@ -47,6 +48,7 @@ a:hover {
     outline: none;
     width: 0rem;
     transition: all 0.2s linear;
+    color: rgb(85,47,150);
 }
 
 .searchBox {
@@ -82,8 +84,6 @@ nav {
     position: sticky;
     top: 0px;
     width: 100%;
-    background-color: white;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
     background-color: white;
 }
 
