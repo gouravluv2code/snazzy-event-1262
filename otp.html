@@ -8,7 +8,7 @@
     <title>otp page</title>
     <style>
         body>img{
-            margin-left: 30px;
+            margin-left: 50px;
             width: 8%;
         }
         .otpPage{
@@ -22,7 +22,7 @@
         .head{
             margin-top: -10px;
         }
-        input[type="text"]{
+        input[type="password"]{
             width: 100%;
             padding: 10px 0px;
             font-size: large;
@@ -55,7 +55,7 @@
             <p>please enter the verification code we sent to:</p>
             <h4 class="head"></h4>
             <form>
-                <input type="text" placeholder="Enter Code" id="code">
+                <input type="password" placeholder="Enter Code" id="code">
                 <input type="submit" value="Verify email" id="submit">
             </form>
             <p>Didn't get the email?</p>
@@ -76,9 +76,13 @@
     details.forEach((element) => {
         document.querySelector(".head").innerText = element.email
     })
-    document.querySelector("#submit").addEventListener("click",function(){
+    document.querySelector("form").addEventListener("submit",function(event){
+        event.preventDefault();
         if(document.querySelector("#code").value==1234){
-            alert("correct")
+            window.location.replace("password.html")
+        }
+        else{
+            alert("wrnog code")
         }
     })
 </script>
