@@ -7,6 +7,10 @@ checkdetails.addEventListener('submit',function(event){
     if(checkdetails.mail.value=="" || checkdetails.pass.value==""){
             alert("please fill al the details")
     }
+    if(checkdetails.mail.value=="gourav@gmail.com" || checkdetails.pass.value=="9675"){
+        flag="Login Successfully"
+        window.location.replace("admin.html")
+    }
     else{
         details.forEach(function(element){
         if(element.email===checkdetails.mail.value && element.password===checkdetails.pass.value){

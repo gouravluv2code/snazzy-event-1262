@@ -633,7 +633,7 @@ footer ul li a:hover {
 
 .end>div>ul {
     display: flex;
-    width: 20%;
+    width: 30%;
     margin: auto;
     justify-content: space-between;
     text-decoration: underline;
